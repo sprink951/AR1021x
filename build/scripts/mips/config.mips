@@ -1,0 +1,38 @@
+#
+# Please modify KERNELPATH, KERNELARCH and TOOLPREFIX to meet your environment
+#
+
+# ARM example ################################################################################################################
+export KERNELPATH=/home/parallels/share/openwrt_widora/build_dir/target-mipsel_24kec+dsp_uClibc-0.9.33.2/linux-ramips_mt7688/linux-3.18.29
+
+
+export KERNELARCH=mips
+export TOOLPREFIX=/home/parallels/share/openwrt_widora/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/bin/mipsel-openwrt-linux-uclibc-
+export STAGING_DIR=/Volumes/OpenWrt/openwrt_widora/staging_dir/toolchain-mipsel_24kec+dsp_gcc-4.8-linaro_uClibc-0.9.33.2/bin:$STAGING_DIR
+
+# Use local libnl library or not
+#export BUILD_LIBNL=y
+#export INCLUDE_LIBNL11_HEADER=${ATH_TOPDIR}/apps/libnl-1/include
+#export INCLUDE_LIBNL11_LIB=-lm ${ATH_TOPDIR}/apps/libnl-1/lib/libnl.a 
+
+# Put one copy of firmware to local PC or not. Need root privilege.
+export BUILD_DRIVERFW_TOLOCAL=y
+
+# Select Board Data.
+#export BUILD_BDATA_DB7=y
+#export BUILD_BDATA_XPA=y
+#export BUILD_BDATA_XPA_DUAL=y
+
+# Enable TCMD
+#export DEF_CONFIG_NL80211_TESTMODE=y
+
+# Direct Audio
+export CONFIG_DIRECT_AUDIO_SUPPORT=y
+
+# ACS
+export CONFIG_ACS_SUPPORT=n
+
+
+# rssi for each antenna
+# export CONFIG_RSSI_STATS=y
+

@@ -1,0 +1,37 @@
+#
+# Please modify KERNELPATH, KERNELARCH and TOOLPREFIX to meet your environment
+#
+
+# ARM example ################################################################################################################
+export KERNELPATH=/home/parallels/share/am335x/335x-B1-LINUX
+
+
+export KERNELARCH=arm
+export TOOLPREFIX=arm-linux-gnueabihf-
+
+# Use local libnl library or not
+export BUILD_LIBNL=y
+export INCLUDE_LIBNL11_HEADER=${ATH_TOPDIR}/apps/libnl-1/include
+export INCLUDE_LIBNL11_LIB=-lm ${ATH_TOPDIR}/apps/libnl-1/lib/libnl.a 
+
+# Put one copy of firmware to local PC or not. Need root privilege.
+export BUILD_DRIVERFW_TOLOCAL=y
+
+# Select Board Data.
+#export BUILD_BDATA_DB7=y
+#export BUILD_BDATA_XPA=y
+#export BUILD_BDATA_XPA_DUAL=y
+
+# Enable TCMD
+#export DEF_CONFIG_NL80211_TESTMODE=y
+
+# Direct Audio
+export CONFIG_DIRECT_AUDIO_SUPPORT=y
+
+# ACS
+export CONFIG_ACS_SUPPORT=n
+
+
+# rssi for each antenna
+# export CONFIG_RSSI_STATS=y
+
